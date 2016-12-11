@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS images(
+image_id INT(11) NOT NULL PRIMARY key AUTO_INCREMENT,
+image_caption VARCHAR(255) NOT NULL,
+image_username VARCHAR(255) NOT NULL,
+image_date DATE not null);

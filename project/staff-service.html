@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>SERVICE ENTRY</title>
+<link rel="stylesheet" type="text/css" href="customer/view.css" media="all">
+<script type="text/javascript" src="customer/view.js"></script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="customer/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>SERVICE ENTRY</a></h1>
+		
+<form action="staff-service.php" name="myForm"  
+          onsubmit="return(validate());" method="post">
+
+					<div class="form_description">
+			<h2>SERVICE ENTRY</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1" name="element_1">SERVICE_ID </label>
+		<div>
+			<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">OLD/NEW</label>
+		<div>
+			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">CUSTOMER ID(only for new customer)</label>
+		<div>
+			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		
+		<li id="li_4" >
+		<label class="description" for="element_4">YEAR</label>
+		<div>
+			<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		
+<li id="li_5" >
+		<label class="description" for="element_5">BILL NUMBER(for only old customers)</label>
+		<div>
+			<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		
+	<li id="li_6" >
+		<label class="description" for="element_6">ACCESSORY COST</label>
+		<div>
+			<input id="element_6" name="element_6" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		
+	
+
+
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="823239" />
+			    
+				<input id="saveForm" class="button_text" type="submit" name="submit" value="Submit" />
+		</li>
+<BR><BR><font size=5><a href="staff-main.html">BACK</A></FONT>
+			</ul>
+		</form>	
+			<img id="bottom" src="customer/bottom.png" alt="">
+	</body>
+<script type="text/javascript">
+
+function validate()
+{
+  
+   if( document.myForm.element_1.value == "" )
+   {
+     alert( "Please provide the service id!" );
+     document.myForm.element_1.focus() ;
+     return false;
+   }
+   if( document.myForm.element_2.value == ""||(document.myForm.element_2.value!="old"&&document.myForm.element_2.value!="new"))
+   {
+     alert( "Please enter old or new!" );
+     document.myForm.element_2.focus() ;
+     return false;
+   }
+   if( document.myForm.element_3.value == "" && document.myForm.element_2.value == "new" )
+   {
+     alert( "Please provide the customer id!" );
+     document.myForm.element_3.focus() ;
+     return false;
+   }
+   if( document.myForm.element_4.value == "")
+   {
+     alert( "Please provide the YEAR!" );
+     document.myForm.element_4.focus() ;
+     return false;
+   }
+
+if( document.myForm.element_5.value == "" && document.myForm.element_2.value == "old" )
+   {
+     alert( "Please provide the bill number!" );
+     document.myForm.element_5.focus() ;
+     return false;
+   }
+
+
+
+   return( true );
+}
+//-->
+</script>
+</html>
