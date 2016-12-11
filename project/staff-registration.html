@@ -1,0 +1,101 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>REGISTRATION</title>
+<link rel="stylesheet" type="text/css" href="reg_form/view.css" media="all">
+<script type="text/javascript" src="reg_form/view.js"></script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="reg_form/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>REGISTRATION</a></h1>
+			<form  name="myForm"  class="appnitro" method="post" action="staff-registration.php"
+          onsubmit="return(validate());">
+
+
+					<div class="form_description">
+			<h2>REGISTRATION</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">REGISTRATION ID </label>
+		<div>
+			<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_2" >
+		<label class="description" for="element_2">DATE </label>
+		<div>
+			<input id="element_2" name="element_2" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_3" >
+		<label class="description" for="element_3">RTO STREET </label>
+		<div>
+			<input id="element_3" name="element_3" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_4" >
+		<label class="description" for="element_4">RTO CITY </label>
+		<div>
+			<input id="element_4" name="element_4" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		<li id="li_5" >
+		<label class="description" for="element_5">RTO  STATE </label>
+		<div>
+			<input id="element_5" name="element_5" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="823525" />
+			    
+				<input type="submit" value="SUBMIT" id="b1" onClick="function1()">	</li>
+<BR><BR><font size=5><a href="staff-main.html">BACK</A></FONT>
+			</ul>
+		</form>	
+			</body>
+
+<script language="javascript" >
+function validate()
+{
+ 
+   if( document.myForm.element_1.value == "" )
+   {
+     alert( "Please provide the Registration id!" );
+     document.myForm.element_1.focus() ;
+     return false;
+   }
+   if( document.myForm.element_2.value == "" )
+   {
+     alert( "Please provide the Date of registration!" );
+     document.myForm.element_2.focus() ;
+     return false;
+   }
+   if( document.myForm.element_3.value == "" )
+   {
+     alert( "Please provide the RTO street address!" );
+     document.myForm.element_3.focus() ;
+     return false;
+   }
+   if( document.myForm.element_4.value == "" )
+   {
+     alert( "Please provide the RTO city address!" );
+     document.myForm.element_4.focus() ;
+     return false;
+   }
+   if( document.myForm.element_5.value == "" )
+   {
+     alert( "Please select the RTO state address!" );
+     document.myForm.element_5.focus() ;
+     return false;
+   }
+  
+   return( true );
+}
+//-->
+</script>
+</html>

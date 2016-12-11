@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>REGISTRATION</title>
+<link rel="stylesheet" type="text/css" href="view/view.css" media="all">
+<script type="text/javascript" src="view/view.js"></script>
+
+</head>
+<body id="main_body" >
+	
+	<img id="top" src="view/top.png" alt="">
+	<div id="form_container">
+	
+		<h1><a>CAR COLOUR</a></h1>
+	<form action="guest-image.php" name="myForm"  
+          onsubmit="return(validate());" method="post">
+
+					<div class="form_description">
+			<h2>CAR IMAGE</h2>
+			<p></p>
+		</div>						
+			<ul >
+			
+					<li id="li_1" >
+		<label class="description" for="element_1">NAME </label>
+		<div>
+			<input id="element_1" name="element_1" class="element text medium" type="text" maxlength="255" value=""/> 
+		</div> 
+		</li>		
+			
+					<li class="buttons">
+			    <input type="hidden" name="form_id" value="823525" />
+			    
+				<input type="submit" value="SUBMIT" id="b1" onClick="function1()">	</li>
+<BR><BR><font size=5><a href="staff-car.html">BACK</A></FONT>
+
+			</ul>
+		</form>	
+			</body>
+
+<script language="javascript" >
+function validate()
+{
+
+var o1=document.getElementById("element_1").value;
+
+
+if(o1=="")
+{
+alert("PLEASE ENTER NAME");
+document.myForm.element_1.focus() ;
+return false;
+}
+
+else
+{
+alert("WELCOME TO CAR SHOWROOM MANAGEMENT");
+//document.write("<A href="C:\Users\gan\Desktop\dbms\form2.html">next </A>");
+//document.write("<link rel="script" href="C:\Users\gan\Desktop\dbms\form2.html"> ");
+return true;
+}
+}
+</script>
+</html>
